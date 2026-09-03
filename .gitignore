@@ -29,6 +29,7 @@ results/*
 *.ckpt
 *.bin
 *.safetensors
+*.npz
 
 *.log
 
