@@ -1,7 +1,7 @@
 # CSE715: Neural Networks and Fuzzy System
 
 
-## Context-Aware Music Understanding Using Graph Neural Networks and BERT: A Multimodal Fusion Approach
+## GNN-BERT Music Context
 This course project explores multimodal music understanding by combining textual metadata with the temporal structure of music. The project uses BERT-based representations, graph neural networks, multimodal fusion, and music captioning.
 
 
@@ -62,7 +62,7 @@ The fusion notebook reports:
 
 
 ## Report
-The project report is available at [Project Report](report/CSE715_Project_Report.pdf).
+The project report is available at [Context-Aware Music Understanding Using Graph Neural Networks and BERT: A Multimodal Fusion Approach](report/CSE715_Project_Report.pdf).
 
 
 
