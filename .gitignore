@@ -11,6 +11,7 @@ data/processed/*
 data/fma_small/*
 data/fma_metadata/*
 data/magnatagatune/*
+data/musiccaps/*
 
 # Keep folder structure
 !data/raw/.gitkeep
