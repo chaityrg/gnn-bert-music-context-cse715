@@ -55,7 +55,7 @@ The fusion notebook reports:
 
 
 ## Project Report
-[Context-Aware Music Understanding Using Graph Neural Networks and BERT: A Multimodal Fusion Approach](report/CSE715_Project_Report.pdf).
+[Context-Aware Music Understanding Using Graph Neural Networks and BERT: A Multimodal Fusion Approach](report/CSE715_Project_Report.pdf)
 
 
 
