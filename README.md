@@ -1,13 +1,43 @@
-# GNN-BERT Music Context
+# CSE715: Neural Networks and Fuzzy System
 
-Multimodal music analysis project combining:
+## GNN-BERT Music Context
 
-- BERT embeddings from track metadata and text.
-- Graph neural networks over the temporal structure of a track.
-- Early-concatenation and cross-attention fusion models.
-- Genre classification, representation visualization, and music captioning experiments.
+This course project explores multimodal music understanding by combining textual metadata with the temporal structure of music. The project uses BERT-based representations, graph neural networks, multimodal fusion, and music captioning.
 
-The current implementation is notebook-based. The notebooks contain the data preparation, model training, evaluation, visualization, and qualitative analysis workflows.
+## Tasks
+
+### Task 1: BERT-Based Music Tag Prediction
+
+Uses track metadata and text with BERT to predict music-related tags from the MagnaTagATune dataset.
+
+Notebook: `notebooks/task1_BERT.ipynb`
+
+### Task 2: Graph Neural Network for Music Structure
+
+Represents the temporal structure of music as graphs and applies a graph attention network for genre classification.
+
+Notebook: `notebooks/task2_GNN.ipynb`
+
+### Task 3: BERT + GNN Fusion
+
+Combines textual BERT embeddings and structural GNN embeddings. The notebook compares GNN-only, BERT-only, Early Concat Fusion, and Cross-Attention Fusion models.
+
+It includes genre classification, evaluation metrics, confusion matrices, precision-recall curves, t-SNE visualizations, and qualitative graph analysis.
+
+Notebook: `notebooks/task3_BERT+GNN.ipynb`
+
+### Task 4: Music Captioning
+
+Explores music caption generation using the MusicCaps dataset and multimodal music representations.
+
+Notebook: `notebooks/task4_MusicCap.ipynb`
+
+## Dataset Used
+
+- **FMA-small:** Audio files and metadata used for music genre classification and structural graph construction.
+- **MagnaTagATune:** Music clips, annotations, and tag information used for BERT-based music tag prediction and mood-related analysis.
+- **MusicCaps:** Music-caption pairs used for the music captioning task.
+- **Processed data:** Prepared text, labels, and other intermediate data used by the notebooks.
 
 ## Project Structure
 
@@ -20,88 +50,20 @@ The current implementation is notebook-based. The notebooks contain the data pre
 │   ├── musiccaps/           MusicCaps data
 │   └── processed/           Processed training data
 ├── notebooks/
-│   ├── task1_BERT.ipynb     Metadata/tag prediction with BERT
-│   ├── task2_GNN.ipynb      Track-structure graph modeling
-│   ├── task3_BERT+GNN.ipynb Multimodal fusion and evaluation
-│   ├── task4_MusicCap.ipynb Music captioning experiments
-│   └── *.pt, *.npz          Saved checkpoints and feature caches
+│   ├── task1_BERT.ipynb
+│   ├── task2_GNN.ipynb
+│   ├── task3_BERT+GNN.ipynb
+│   ├── task4_MusicCap.ipynb
+│   └── saved models/        Saved model checkpoints and feature caches
 ├── report/
 │   └── CSE715_Project_Report.pdf
-├── results/                 Generated result files and plots
-├── config.yaml              Reserved configuration file
-└── requirements.txt         Python dependency file
+├── results/
+│   ├── task1/               Task 1 results
+│   ├── task2/               Task 2 results
+│   └── task3/               Task 3 results
+├── config.yaml
+└── requirements.txt
 ```
-
-## Workflow
-
-Run the notebooks in this order:
-
-1. **Task 1: BERT**
-	Open `notebooks/task1_BERT.ipynb` to prepare metadata text and train the BERT-based tag model.
-
-2. **Task 2: GNN**
-	Open `notebooks/task2_GNN.ipynb` to build track-structure graphs, train the graph model, and create the graph cache used by later tasks.
-
-3. **Task 3: BERT + GNN**
-	Open `notebooks/task3_BERT+GNN.ipynb` to train and compare:
-   
-	- GNN-only
-	- BERT-only
-	- Early Concat Fusion
-	- Cross-Attention Fusion
-
-	This notebook also produces classification reports, confusion matrices, precision-recall curves, t-SNE plots colored by genre and mood, and qualitative graph case studies.
-
-4. **Task 4: MusicCaps**
-	Open `notebooks/task4_MusicCap.ipynb` for the captioning experiments.
-
-## Setup
-
-Use Python 3.10 or newer and a virtual environment. From the repository root:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-```
-
-The checked-in `requirements.txt` is currently empty, so install the packages required by the notebooks in the selected environment. The main Task 1-3 workflow uses PyTorch, PyTorch Geometric, Transformers, pandas, NumPy, scikit-learn, matplotlib, seaborn, and Jupyter support.
-
-For a CUDA-enabled PyTorch installation, install the PyTorch build matching the local CUDA version first, then install the remaining notebook dependencies. PyTorch Geometric should be installed using the compatibility instructions for the selected PyTorch/CUDA build.
-
-Open the repository in VS Code, select the virtual environment as the notebook kernel, and run cells from top to bottom. Several cells depend on variables created earlier in the same notebook.
-
-## Data Requirements
-
-The notebooks expect the data directories under `dataset/` with the existing project layout. In particular, Task 3 expects:
-
-- FMA metadata and FMA-small audio data.
-- Processed tag data under `dataset/processed/`.
-- MagnaTagATune annotations when generating annotation-based mood labels.
-- Model checkpoints and feature caches generated by earlier tasks, or the included checkpoint/cache files in `notebooks/`.
-
-Large datasets and model artifacts may require substantial disk space and memory. GPU acceleration is recommended for BERT and fusion-model training.
-
-## Existing Checkpoints and Caches
-
-The `notebooks/` directory currently contains checkpoints for the main experiments, including:
-
-- `best_bert_only.pt`
-- `best_gnn_only.pt`
-- `best_regularized_gat.pt`
-- `best_early_concat.pt`
-- `best_cross_attention.pt`
-- `best_model.pt`
-
-It also contains cached graph and mel-spectrogram features. Checkpoint architecture and feature dimensions must match the notebook cell that loads them.
-
-## Reproducibility Notes
-
-- Run preprocessing and alignment cells before training or visualization cells.
-- Keep the test-sample order unchanged when combining graph, BERT, genre, and mood data.
-- Use the same graph normalization statistics for train, validation, and test data.
-- The t-SNE plots use a fixed random seed, but t-SNE coordinates are visualization-dependent and should not be treated as evaluation metrics.
-- Mood labels based on MagnaTagATune annotations may be unavailable for many FMA tracks. The Task 3 visualization marks unmatched tracks as `Unknown`.
 
 ## Evaluation Metrics
 
