@@ -6,17 +6,10 @@ This course project explores multimodal music understanding by combining textual
 
 
 ## Tasks
-### Task 1: BERT Baseline for Music Tag Understanding
-- Uses track metadata and text with BERT to predict music-related tags from the MagnaTagATune dataset.
-
-### Task 2: GNN on Music Structure Graphs
-- Represents the temporal structure of music as graphs and applies a graph attention network for genre classification.
-
-### Task 3: GNN–BERT Fusion for Multi-Context Understanding
-- Combines textual BERT embeddings and structural GNN embeddings. The notebook compares GNN-only, BERT-only, Early Concat Fusion, and Cross-Attention Fusion models. It includes genre classification, evaluation metrics, confusion matrices, precision-recall curves, t-SNE visualizations, and qualitative graph analysis.
-
-### Task 4: Cross-Modal MusicCaps Alignment
-- Explores music caption generation using the MusicCaps dataset and multimodal music representations.
+- **Task 1 -- BERT Baseline for Music Tag Understanding:** Uses track metadata and text with BERT to predict music-related tags from the MagnaTagATune dataset.
+- **Task 2 -- GNN on Music Structure Graphs:** Represents the temporal structure of music as graphs and applies a graph attention network for genre classification.
+- **Task 3 -- GNN–BERT Fusion for Multi-Context Understanding:** Combines textual BERT embeddings and structural GNN embeddings. The notebook compares GNN-only, BERT-only, Early Concat Fusion, and Cross-Attention Fusion models. It includes genre classification, evaluation metrics, confusion matrices, precision-recall curves, t-SNE visualizations, and qualitative graph analysis.
+- **Task 4 -- Cross-Modal MusicCaps Alignment:** Explores music caption generation using the MusicCaps dataset and multimodal music representations.
 
 
 ## Dataset Used
@@ -61,8 +54,8 @@ The fusion notebook reports:
 - Precision-recall curves
 
 
-## Report
-The project report is available at [Context-Aware Music Understanding Using Graph Neural Networks and BERT: A Multimodal Fusion Approach](report/CSE715_Project_Report.pdf).
+## Project Report
+[Context-Aware Music Understanding Using Graph Neural Networks and BERT: A Multimodal Fusion Approach](report/CSE715_Project_Report.pdf).
 
 
 
