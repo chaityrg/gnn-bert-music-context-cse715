@@ -6,20 +6,20 @@ This course project explores multimodal music understanding by combining textual
 
 
 ## Tasks
-- **Task 1 -- BERT Baseline for Music Tag Understanding:** Uses track metadata and text with BERT to predict music-related tags from the MagnaTagATune dataset.
-- **Task 2 -- GNN on Music Structure Graphs:** Represents the temporal structure of music as graphs and applies a graph attention network for genre classification.
-- **Task 3 -- GNN–BERT Fusion for Multi-Context Understanding:** Combines textual BERT embeddings and structural GNN embeddings. The notebook compares GNN-only, BERT-only, Early Concat Fusion, and Cross-Attention Fusion models. It includes genre classification, evaluation metrics, confusion matrices, precision-recall curves, t-SNE visualizations, and qualitative graph analysis.
-- **Task 4 -- Cross-Modal MusicCaps Alignment:** Explores music caption generation using the MusicCaps dataset and multimodal music representations.
+- **Task 1 - BERT Baseline for Music Tag Understanding:** Uses track metadata and text with BERT to predict music-related tags from the MagnaTagATune dataset.
+- **Task 2 - GNN on Music Structure Graphs:** Represents the temporal structure of music as graphs and applies a graph attention network for genre classification.
+- **Task 3 - GNN–BERT Fusion for Multi-Context Understanding:** Combines textual BERT embeddings and structural GNN embeddings. The notebook compares GNN-only, BERT-only, Early Concat Fusion, and Cross-Attention Fusion models. It includes genre classification, evaluation metrics, confusion matrices, precision-recall curves, t-SNE visualizations, and qualitative graph analysis.
+- **Task 4 - Cross-Modal MusicCaps Alignment:** Explores music caption generation using the MusicCaps dataset and multimodal music representations.
 
 
 ## Dataset Used
 - **FMA-small:** Audio files and metadata containing 8,000 30-second tracks across eight genres, used for genre classification and music structure graph construction.
 - **MagnaTagATune:** Music clips, metadata, and human-annotated tags containing 25,863 annotated clips and 188 tags, used for multi-label music tag classification.
-- **MusicCaps:** 5,521 music examples paired with natural-language captions describing the corresponding audio, used for audio--text representation learning and retrieval.
+- **MusicCaps:** 5,521 music examples paired with natural-language captions describing the corresponding audio, used for audio-text representation learning and retrieval.
 
 
 ## Project Structure
-```text
+```mathematica
 .
 ├── dataset/
 │   ├── fma_metadata/        FMA metadata tables
