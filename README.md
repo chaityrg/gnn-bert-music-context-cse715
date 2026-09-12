@@ -19,7 +19,7 @@ This course project explores multimodal music understanding by combining textual
 
 
 ## Project Structure
-```mathematica
+```text
 .
 ├── dataset/
 │   ├── fma_metadata/        FMA metadata tables
