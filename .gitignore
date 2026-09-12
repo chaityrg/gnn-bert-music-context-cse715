@@ -1,30 +1,27 @@
 __pycache__/
 *.py[cod]
+
 .venv/
 venv/
 env/
 
 .ipynb_checkpoints/
 
-data/raw/*
-data/processed/*
-data/fma_small/*
-data/fma_metadata/*
-data/magnatagatune/*
-data/musiccaps/*
+# Ignore all files inside dataset folders
+dataset/processed/*
+dataset/fma_small/*
+dataset/fma_metadata/*
+dataset/magnatagatune/*
+dataset/musiccaps/*
 
-# Keep folder structure
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!data/fma_small/.gitkeep
-!data/fma_metadata/.gitkeep
-!data/magnatagatune/.gitkeep
+# Keep the folders using .gitkeep
+!dataset/processed/.gitkeep
+!dataset/fma_small/.gitkeep
+!dataset/fma_metadata/.gitkeep
+!dataset/magnatagatune/.gitkeep
+!dataset/musiccaps/.gitkeep
 
-results/*
-!results/.gitkeep
-!results/plots/
-!results/retrieval_examples/
-
+# Model/checkpoint files
 *.pt
 *.pth
 *.ckpt
@@ -32,10 +29,11 @@ results/*
 *.safetensors
 *.npz
 
+# Logs
 *.log
 
+# OS/editor files
 .DS_Store
 Thumbs.db
-
 .vscode/
 .idea/
