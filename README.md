@@ -38,7 +38,8 @@ This course project explores multimodal music understanding by combining textual
 ├── results/
 │   ├── task1/               Task 1 results
 │   ├── task2/               Task 2 results
-│   └── task3/               Task 3 results
+│   ├── task3/               Task 3 results
+│   └── task4/               Task 4 results
 ├── .gitignore
 ├── config.yaml
 ├── README.md
